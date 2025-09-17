@@ -58,6 +58,16 @@ The app lets you register new client projects, curate a benchmark library, run i
 
 ---
 
+### 📋 Review Audit Page
+- Dedicated page combines audit metadata, completion percentage, and benchmark stats.  
+- Split into **top summary** and **detailed breakdown** sections.  
+- Provides an at-a-glance view for consultants and clients before exporting deliverables.  
+
+![Review page – top](assets/Overview%20Page%20Top.png "Overview Page – Top")  
+![Review page – bottom](assets/Overview%20Page%20Bottom.png "Overview Page – Bottom")
+
+---
+
 ### 📊 Reporting & Client Handoffs
 - Review page shows project metadata, benchmarks, and completion stats.  
 - Excel export provides suggestion logs with dropdowns and hour rollups.  
