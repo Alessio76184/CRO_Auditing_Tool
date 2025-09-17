@@ -33,6 +33,7 @@ The app lets you register new client projects, curate a benchmark library, run i
 - Audit status persists (`not_started`, `in_progress`, `completed`).  
 
 ![Project dashboard](assets/Project%20Page.png "Project Page")
+![Project dashboard](assets/Adding%20Client%20to%20Project.png "Adding Clients")
 
 ---
 
@@ -63,7 +64,7 @@ The app lets you register new client projects, curate a benchmark library, run i
 - Easy to hand off to clients as deliverables.  
 
 ![Excel summary sheet](assets/Excel%20Summary%20Page.png "Excel Summary Page")
-![Excel list of suggestions](assets/Excel%20List%20of%20Suggestions.png "Excel List of Suggestions")
+![Excel list of suggestions](assets/Excel%20List%20of%20Suggestions%20Example.png "Excel List of Suggestions")
 
 ---
 
@@ -75,14 +76,22 @@ The app lets you register new client projects, curate a benchmark library, run i
 ---
 
 ## 🏗 Architecture at a Glance
+```
 cro-audit-automation/
-├── routes/                 # Blueprints for projects, benchmarks, suggestions, reports
-├── services/               # Database service layer
-├── templates/              # Jinja templates for dashboard, overlays, reports
-├── static/                 # CSS/JS for modals, uploads, theme support
-├── uploads/                # Company logos
-├── cro-audit-extension/    # Chrome extension (popup, overlay, background script)
-└── flask_login_blueprint/  # Git submodule for reusable auth stack
+|-- app.py                  # Flask app factory + blueprint registration
+|-- routes/                 # Feature-specific blueprints (projects, benchmarks, suggestions, zeitgeist)
+|-- services/               # Database-facing service layer and domain exceptions
+|-- flask_login_blueprint/  # Git submodule with shared auth routes and decorators
+|-- db/
+|   `-- db_provider.py      # SQLite singleton, schema bootstrap, audit progress helpers
+|-- templates/              # Jinja templates for dashboard, overlays, reports, partials
+|-- static/
+|   |-- css/style.css       # Design system, overlay styling, modals, theme support
+|   `-- js/main.js          # Front-end logic: modals, CRUD calls, drag/drop uploads, lightbox
+|-- uploads/                # Company logos saved by the intake form
+|-- cro-audit-extension/    # Manifest V3 extension (popup, background, overlay injector)
+`-- add_user.py             # Utility script to seed initial login credentials
+```
 
 ---
 
