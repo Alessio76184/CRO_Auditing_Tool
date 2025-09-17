@@ -1,9 +1,9 @@
 # CRO Auditing Tool
 
-CRO Audit Automation turns conversion-rate optimization research into an actionable workflow.  
+CRO Auditing Tool turns conversion-rate optimisation research into an actionable workflow.  
 The app lets you register new client projects, curate a benchmark library, run interactive audits on live sites, and deliver a shareable review package — all from the browser.
 
-> 💡 This README is intended as a **showcase**. Screenshots and GIFs illustrate the workflow and functionality. The source code and setup remain private.
+> 💡 This README is intended as a **showcase**. Screenshots illustrate the workflow and functionality. The source code and setup remain private.
 
 ---
 
@@ -11,7 +11,7 @@ The app lets you register new client projects, curate a benchmark library, run i
 - Built with **Flask**, **vanilla JavaScript**, and **SQLite** — lightweight and easy to host.  
 - Bundled **Manifest V3 Chrome extension** overlays the audit checklist on any website.  
 - Authentication handled by a dedicated **submodule** (`flask_login_blueprint`) for reusability.  
-- Designed for **solo consultants** or **small teams** who want audit rigor without enterprise tooling.  
+- Designed for **solo consultants** or **small teams** who want audit rigour without enterprise tooling.  
 
 ---
 
