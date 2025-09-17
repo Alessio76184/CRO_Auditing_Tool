@@ -1,4 +1,4 @@
-# CRO Audit Automation
+# CRO Auditing Tool
 
 CRO Audit Automation turns conversion-rate optimization research into an actionable workflow.  
 The app lets you register new client projects, curate a benchmark library, run interactive audits on live sites, and deliver a shareable review package — all from the browser.
